@@ -3,7 +3,7 @@
 *
 * @author  Aidan Lalonde-Novales
 * @version 1.0
-* @since   2022-11-22
+* @since   2022-11-21
 */
 
 import java.util.Arrays;
@@ -25,29 +25,74 @@ final class MagicSquare {
         throw new IllegalStateException("Cannot be instantiated");
     }
 
-    /** The middle left index. */
+    /**
+     * The middle left index.
+     */
     public static final int THREE = 3;
-    /** The center index. */
+
+    /**
+     * The center index.
+     */
     public static final int FOUR = 4;
-    /** The middle right index. */
+
+    /**
+     * The middle right index.
+     */
     public static final int FIVE = 5;
-    /** The lower left index. */
+
+    /**
+     * The lower left index.
+     */
     public static final int SIX = 6;
-    /** The lower center index. */
+
+    /**
+     * The lower center index.
+     */
     public static final int SEVEN = 7;
-    /** The lower right index. */
+
+    /**
+     * The lower right index.
+     */
     public static final int EIGHT = 8;
-    /** The maximum index of the array. */
+
+    /**
+     * The maximum index of the array.
+     */
     public static final int NINE = 9;
-    /** The expected sum of a row/column/diagonal. */
+
+    /**
+     * The expected sum of a row/column/diagonal.
+     */
     public static final int MAGICNUM = 15;
 
-    public static void genSquare(final int[] square, final int[] currentSquare,
-                                 final int index) {
-        // generate the magic sqaure
-        // code here.
+    /**
+     * Function that checks for duplicates in an array.
+     *
+     * @param sqrArray - array to be checked.
+     * @return boolean
+     */
+    public static boolean hasDuplicates(final int[] sqrArray) {
+        // aaa
     }
 
+    /**
+     * Function that generates every possible magic square.
+     *
+     * @param pNum - possible numbers to fill sqrArray with.
+     * @param sqrArray - array to be filled and checked for "magic".
+     * @param index - current index of sqrArray.
+     */
+    public static void genSquare(final int[] pNum, final int[] sqrArray,
+                                 final int index) {
+        // generate the magic square here.
+    }
+
+    /**
+     * Function that checks if an array is "magic".
+     *
+     * @param preSquare - array to be checked.
+     * @return boolean
+     */
     public static boolean isMagic(final int[] preSquare) {
         // returns true or false for whether or not array is a magic square
         int row1 = preSquare[0] + preSquare[1] + preSquare[2];
@@ -64,6 +109,11 @@ final class MagicSquare {
             diag1 == diag2 && diag2 == MAGICNUM;
     }
 
+    /**
+     * Function that prints a magic square with an appropriate format.
+     *
+     * @param outputSquare - array to be printed.
+     */
     public static void printMagicSquare(final int[] outputSquare) {
         // prints inputted array in a magic square format
         System.out.println("\n*****");
@@ -79,7 +129,6 @@ final class MagicSquare {
     }
 
     public static void main(final String[] args) {
-        // main stub, get user input here
         int[] magicSquare = {1, 2, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE};
         int[] extraArray = {0, 0, 0, 0, 0, 0, 0, 0, 0};
         System.out.println("\n");
